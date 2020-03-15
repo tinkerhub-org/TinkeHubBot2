@@ -1,5 +1,5 @@
-# Project Name
-Long Description about project. This project do that. This project is awesome...
+# TinkerHub Bot 
+This is a telegram bot for TinkerHub. Bot will help share learning resoruces to learn various technologies
 ## How it Works ?
 Explaining the working of project
 ## Libraries used
