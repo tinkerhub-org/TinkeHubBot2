@@ -1,0 +1,205 @@
+intents:
+ - start
+ - goodbye
+ - affirm
+ - deny
+ - mood_great
+ - mood_unhappy
+ - bot_challenge
+ - choose
+ - select_tech1
+ - select_tech2
+ - select_tech3
+ - select_tech4
+ - select_tech5
+ - select_tech6
+ - select_tech7
+ - select_tech8
+ - select_tech9
+ - select_tech10
+ - select_tech11
+ - select_serve
+ - newbie
+ - advanced
+ - learn_res
+ - Con_w_men
+ - webdev
+ - python
+ 
+
+actions:
+- utter_greet
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_iamabot
+- utter_serve
+- utter_rate1
+- utter_rate2
+- utter_rate3a
+- utter_rate3b
+- utter_rate4a
+- utter_rate4b
+- utter_rate5a
+- utter_rate5b
+- utter_rate6
+- utter_rate7
+- utter_rate8a
+- utter_rate8b
+- utter_rate9a
+- utter_rate9b
+- utter_rate10
+- utter_rate11
+- utter_newbie
+- utter_advanced
+- utter_menslist
+- utter_python_bg
+- utter_reslist
+- utter_webdev_html
+- utter_webdev_js
+
+entities:
+- tech
+
+slots:
+  tech:
+    type: text
+    auto_fill: False
+    
+templates:
+  utter_greet:
+  - text: "Heya... I'm TinkerBot. I'm here to help you learn some cool tech. I could also share learning resourses and do mentor connects. Lets start, You are"
+    button_type: vertical
+    buttons:
+    - title: "New to Coding"
+      payload: '/newbie'
+    - title: "Explore Technology"
+      payload: '/advanced'
+
+  utter_newbie:
+  - text: " Glad that your interested in technology. Here are the two tech that you can learn simply."
+    button_type: vertical
+    buttons:
+    - title: "Web development"
+      payload: '/webdev'
+    - title: "Python"
+      payload: '/python'
+      
+  utter_advanced:
+  - text: "I can help you to learn advanced tech or connect with mentors. Please select one."
+    button_type: vertical
+    buttons:
+    - title: "Learning resources"
+      payload: '/learn_res'
+    - title: "Connect mentors"
+      payload: '/Con_w_men'
+      
+  utter_webdev_html:
+  - text: "HTML and Javascript are the foundations of web development. You can start learning from here.
+           https://www.notion.so/HTML-Basics-78f6c6d6ccb94bb58cca31a356fc1d7e" 
+ 
+  utter_webdev_js:
+  - text: "https://www.notion.so/javascript-Basics-6b6a04bcd4ae43af848ef028c05a299e"  
+  
+  utter_python_bg:
+  - text: "https://www.notion.so/Python-Beginner-c13d10b3bc8b42309aaf2d0115fb3933" 
+  
+  utter_reslist:
+  - text: "Please select one of the technology you love to learn"
+    button_type: vertical
+    buttons:
+    - title: "Android"
+      payload: '/select_tech1'
+    - title: "Arduino"
+      payload: '/select_tech2'
+    - title: "Data Analytics"
+      payload: '/select_tech3'
+    - title: "Digital Marketing"
+      payload: '/select_tech4'
+    - title: "Github"
+      payload: '/select_tech5'
+    - title: "HTML"
+      payload: '/select_tech6'
+    - title: "Javascript"
+      payload: '/select_tech7'
+    - title: "Machine Learning"
+      payload: '/select_tech8'
+    - title: "Python"
+      payload: '/select_tech9'
+    - title: "Raspberry Pi"
+      payload: '/select_tech10'
+    - title: "UI/Ux"
+      payload: '/select_tech11'
+      
+  utter_menslist:
+  - text: "Gopikrishnan (Machine Learning/ Python) --> @Bored_GKS 
+           \nAnurag (Machine Learning/ Python) --> @anu_paari
+           \nLazim (UI/UX) --> @Lazime
+           \nNiyas (UI/UX) --> @niyasv
+           \nYadev (Web developement) --> @Yadevjayachandran
+           \nGokul (Machine Learning/ Python) --> @GokulDAS027
+           \nAthul (Golang) --> @a2hu1
+           \nWeb (Web development) --> @jagannathbhat"
+ 
+  utter_serve:
+  - text: " Perfect... Look what I got for you ?"
+ 
+  utter_rate1:
+  - text: "https://www.notion.so/Kotlin-for-Android-3406fda9bf3f475a87b8524db2069f36"
+
+  utter_rate2:
+  - text: "https://www.notion.so/Arduino-40176d8ed9c24e1fa94a1093f349a8b8"
+
+  utter_rate3a:
+  - text: "https://www.notion.so/Data-Analytics-Beginner-91f97b0a7b51459ab05997432223f72f"
+    
+  utter_rate3b:
+  - text: "https://www.notion.so/Data-Analytics-Advanced-2e2a34c6233842dc8bf14be603328381"
+
+  utter_rate4a:
+  - text: "https://www.notion.so/Digital-Marketing-Beginner-87722abf5a1445f7a728513d76f86681"
+    
+  utter_rate4b:
+  - text: "https://www.notion.so/Digital-Marketing-Advanced-1adcf223b9944a6da416dc72f70d8794"
+
+  utter_rate5a:
+  - text: "https://www.notion.so/GitHub-Beginner-34ddb2bdd2054224bd31c24ce84d64f1"
+ 
+  utter_rate5b:
+  - text: "https://www.notion.so/GitHub-Advanced-dc2b226421464ccc8b58b2a2d7b333db"
+  
+  utter_rate6:
+  - text: "https://www.notion.so/HTML-Basics-78f6c6d6ccb94bb58cca31a356fc1d7e"
+
+  utter_rate7:
+  - text: "https://www.notion.so/javascript-Basics-6b6a04bcd4ae43af848ef028c05a299e"
+
+  utter_rate8a:
+  - text: "https://www.notion.so/Machine-Learning-Beginner-60c58689ed454319ab6a1c4019a8c295"
+
+  utter_rate8b:
+  - text: "https://www.notion.so/Machine-Learning-Advanced-5156f313eab14b1bbb84cfd87c5a892e"
+  
+  utter_rate9a:
+  - text: "https://www.notion.so/Python-Beginner-c13d10b3bc8b42309aaf2d0115fb3933"
+
+  utter_rate9b:
+  - text: "https://www.notion.so/Python-Advanced-479c3adfebf446bd819d6b44fe927b6c"
+  
+  utter_rate10:
+  - text: "https://www.notion.so/Raspberry-Pi-6afce84ca6114cbfaf4924e465448acf"
+
+  utter_rate11:
+  - text: "https://www.notion.so/UI-UX-e9da8c1d98c5446da65eab148c3a3c7d"
+    
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye Bye Happy Learning..."
+
+  utter_iamabot:
+  - text: "I am a bot, Made with ❤️ by Tinkerhub."
